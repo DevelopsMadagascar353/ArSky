@@ -82,7 +82,7 @@ h2 {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 44px;
   line-height: normal;
 }
 
@@ -990,7 +990,7 @@ button:focus:not(:focus-visible) {
   SITE FOOTER               
 -----------------------------------------*/
 .site-footer {
-  background: var(--dark-color);
+  background: var(--primary-color);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -1006,7 +1006,7 @@ button:focus:not(:focus-visible) {
 }
 
 .footer-menu-link {
-  color: #6c757d;
+  color: #000000;
   font-weight: var(--font-weight-light);
   display: inline-block;
   vertical-align: top;
