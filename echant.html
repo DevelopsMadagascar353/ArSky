@@ -52,11 +52,11 @@ https://www.tooplate.com/view/2127-little-fashion
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Accueil</a>
+                            <a class="nav-link " href="index.html">Accueil</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="echant.html">Nos Echantillons</a>
+                            <a class="nav-link active" href="echant.html">Nos Echantillons</a>
                         </li>
 
                         <li class="nav-item">
@@ -80,6 +80,63 @@ https://www.tooplate.com/view/2127-little-fashion
             </div>
         </section>
     
+
+
+        <div class="echatillon">
+            <div class="ligne1">
+                <img src="Nouveau dossier/1.jpg" alt="">
+                <p> <span>Plancher en bois massif :</span> Ce plancher en bois naturel présente une texture authentique et chaleureuse, idéale pour apporter un style rustique ou traditionnel à votre espace. La finition lisse et le grain du bois sont mis en valeur, garantissant à la fois durabilité et esthétisme.</p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/2.jpg" alt="">
+                <p> <span>Carrelage en céramique :</span> Ce sol en céramique est reconnu pour sa résistance et sa facilité d'entretien. Il présente une surface lisse et brillante, offrant une touche contemporaine et élégante. Son design est idéal pour les cuisines et salles de bain.</p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/3.jpg" alt="">
+                <p> <span>Parquet stratifié :</span>Parquet stratifié : Ce parquet stratifié combine un aspect bois naturel avec la facilité d'installation et d'entretien. Son système de pose flottante et sa résistance à l'usure en font un choix populaire pour les espaces à fort passage.</p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/4.jpg" alt="">
+                <p> <span>Revêtement en vinyle :</span>Revêtement en vinyle : Ce revêtement en vinyle imite à la perfection le bois ou la pierre tout en offrant une grande résistance à l'humidité. Il est parfait pour les pièces à usage intensif ou les environnements humides comme les sous-sols ou les salles de bain.</p>
+            </div>
+        
+            <style>
+                .echatillon {
+                   
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    text-align: center;
+                }
+        
+                .ligne1 {
+                    flex: 1 1 300px;
+                    margin: 10px;
+                    max-width: 45%;
+                }
+        
+                .ligne1 img {
+                    width: 80%;
+                    height: auto;
+                    transition: 0.2s;
+                }
+
+                .ligne1 img:hover{
+                    width: 100%;
+                }
+                span{
+                    font-weight: bold;
+                }
+        
+                /* Media query to adjust layout for smaller screens */
+                @media (max-width: 768px) {
+                    .ligne1 {
+                        max-width: 100%;
+                    }
+                }
+            </style>
+        </div>
+        
         
         
 
