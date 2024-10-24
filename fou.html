@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ArSky Fournisseurs et manufacture</title>
+
+  
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .buttons {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: lightgray;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .buttons button.active {
+            background-color: blue;
+            color: white;
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 24px;
+        }
+        .active-content {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .buttons button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+            .content h1 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .buttons button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+            .content h1 {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <script>
+        function afficherContenu(id, button) {
+            // Masquer tous les contenus
+            document.getElementById('fournisseur').classList.remove('active-content');
+            document.getElementById('manufact').classList.remove('active-content');
+            document.getElementById('echantillon').classList.remove('active-content');
+
+            // Enlever le style actif de tous les boutons
+            var boutons = document.querySelectorAll('.buttons button');
+            boutons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Afficher le contenu cliqué et ajouter le style actif au bouton
+            document.getElementById(id).classList.add('active-content');
+            button.classList.add('active');
+        }
+    </script>
+
+    <div class="buttons">
+        <button onclick="afficherContenu('fournisseur', this)">Fournisseur</button>
+        <button onclick="afficherContenu('manufact', this)">Manufact</button>
+        <button onclick="afficherContenu('echantillon', this)">Échantillon</button>
+    </div>
+
+    <!-- Contenu lié à chaque bouton -->
+    <div id="fournisseur" class="content">
+        <h1>Ici Fournisseur</h1>
+        <p>Contenu spécifique pour Fournisseur.</p>
+    </div>
+
+    <div id="manufact" class="content">
+        <h1>Ici Manufact</h1>
+        <p>Contenu spécifique pour Manufact.</p>
+    </div>
+
+    <div id="echantillon" class="content">
+        <div class="echatillon">
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/3TMD2690.jpeg" alt="">
+                <p> <span>#12593</span> </p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/69-871.jpeg" alt="">
+                <p> <span>#0001</span> </p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/B6633012.jpeg" alt="">
+                <p> <span>#0901</span> </p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/CORTINA BEIGE.jpeg" alt="">
+                <p> <span>#9301</span> </p>
+            </div>
+        </div>
+        <div class="echatillon">
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/DSL0620.jpeg" alt="">
+                <p> <span>#1Fs93</span> </p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/ECO STONE BIANCO.jpeg" alt="">
+                <p> <span>#uXc1</span> </p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/GANI MARBLE.jpeg" alt="">
+                <p> <span>#ab901</span> </p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/HF631505.jpeg" alt="">
+                <p> <span>#9s301</span> </p>
+            </div>
+        </div>
+        <div class="echatillon">
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/DSL0620.jpeg" alt="">
+                <p> <span>#1Fs93</span> </p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/ECO STONE BIANCO.jpeg" alt="">
+                <p> <span>#uXc1</span> </p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/GANI MARBLE.jpeg" alt="">
+                <p> <span>#ab901</span> </p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/HF631505.jpeg" alt="">
+                <p> <span>#9s301</span> </p>
+            </div>
+        </div>
+
+         
+        <style>
+            .echatillon {
+               
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                text-align: center;
+            }
+    
+            .ligne1 {
+                flex: 1 1 300px;
+                margin: 10px;
+                max-width: 45%;
+            }
+    
+            .ligne1 img {
+                width: 80%;
+                height: auto;
+                transition: 0.2s;
+            }
+
+            .ligne1 img:hover{
+                border: rgb(68, 184, 202);
+            }
+            span{
+                font-weight: bold;
+            }
+    
+            /* Media query to adjust layout for smaller screens */
+            @media (max-width: 768px) {
+                .ligne1 {
+                    max-width: 100%;
+                }
+            }
+        </style>
+    </div>
+
+</body>
+</html>
