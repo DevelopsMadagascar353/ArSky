@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ArSky Contact</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/slick.css"/>
+
+    <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="index.html">
+                <strong><span>ArSky</span>Digitale</strong>
+            </a>
+
+            <div class="d-lg-none">
+                <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+
+                <a href="#" class="bi-bag custom-icon"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Accueil</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="echant.html">Nos Echantillons</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ajouterDesEchantillons.html">Ajouter votre Echantillons</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sign-up.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-none d-lg-block">
+                    <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+
+                    <a href="#" class="bi-bag custom-icon"></a>
+                </div>
+            </div>
+        </div>
+    </nav> 
+
+
+
+
+
+
+    <style>
+        /* Style global */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Style du conteneur du formulaire */
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .form-container:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Titre du formulaire */
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        /* Style des labels */
+        label {
+            display: block;
+            color: #555;
+            margin: 10px 0 5px;
+            font-size: 16px;
+        }
+
+        /* Style des champs de saisie et du menu déroulant */
+        select, input[type="file"], input[type="text"] {
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, input[type="file"]:focus, input[type="text"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        /* Bouton de soumission */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+            transform: translateY(-3px);
+        }
+
+        /* Pour un design plus moderne, ajout d'ombre et de transitions */
+        input, select, label, h2 {
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Pour le mode responsif, s'adapte aux écrans plus petits */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 15px;
+                border-radius: 10px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            select, input[type="file"], input[type="text"], input[type="submit"] {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Entrer votre échantillon 4K ici</h2>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            <!-- Champ input pour texte -->
+            <label for="textInput">Entrer un texte :</label>
+            <input type="text" id="textInput" name="textInput" placeholder="Votre texte ici">
+
+            <!-- Menu déroulant avec options -->
+            <label for="choice">Sélectionner un type de echantillon :</label>
+            <select id="choice" name="choice">
+                <option value="parquet">Parquet</option>
+                <option value="vinyl">Vinyl</option>
+                <option value="carreau">Carreau</option>
+                <option value="stratifier">Stratifier</option>
+                <option value="stratifier">Plancher bois</option>
+            </select>
+
+            <!-- Champ pour uploader un fichier -->
+            <label for="fileInput">Choisir un fichier JPEG 4k  :</label>
+            <input type="file" id="fileInput" name="fileInput">
+
+            <!-- Bouton de soumission -->
+            <input type="submit" value="Soumettre" onclick="afficherAlerte(); return false;">
+            <script>
+                function afficherAlerte() {
+                    alert("Payer 2$ pour enregistrer votre Échantillon");
+                }
+            </script>
+        </form>
+    </div>
+
+</body>
+</html>
