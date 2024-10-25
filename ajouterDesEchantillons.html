@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/slick.css"/>
 
     <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
 </head>
 <body>
@@ -158,19 +159,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link " href="index.html">Accueil</a>
+                        <a class="nav-link " href="index.html"><i class="fa fa-home"></i> Accueil</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="faste.html">Fournisseurs et Manufacture</a>
+                        <a class="nav-link " href="faste.html"><i class="fa fa-industry"></i> Fournisseurs et Manufacture</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link active" href="ajouterDesEchantillons.html">Ajouter votre Echantillons</a>
+                        <a class="nav-link active" href="ajouterDesEchantillons.html"><i class="fa fa-plus-square"></i>  Ajouter votre Echantillons</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="sign-up.html">Contact</a>
+                        <a class="nav-link" href="sign-up.html"><i class="fa fa-envelope"></i> Contact</a>
                     </li>
                 </ul>
 
@@ -195,19 +196,92 @@
             <!-- Menu déroulant avec options -->
             <label for="choice">Sélectionner un type de echantillon :</label>
             <select id="choice" name="choice">
-                <option value="parquet">Parquet</option>
-                <option value="vinyl">Vinyl</option>
-                <option value="carreau">Carreau</option>
-                <option value="stratifier">Stratifier</option>
-                <option value="stratifier">Plancher bois</option>
+                <option value="Parquet">Parquet en bois massif</option>
+                <option value="parquet">Carrelage en céramique</option>
+                <option value="vinyl">Sol vinyle (PVC)</option>
+                <option value="carreau">Moquette</option>
+                <option value="stratifier">Béton ciré</option>
+                <option value="stratifier">Lino (linoléum)</option>
             </select>
 
-            <!-- Champ pour uploader un fichier -->
-            <label for="fileInput">Choisir un fichier JPEG 4k  :</label>
-            <input type="file" id="fileInput" name="fileInput">
+           <!-- Champ pour uploader un fichier -->
+<div class="file-upload-container">
+    <label for="fileInput" class="file-label">Choisir un fichier JPEG 4k :</label>
+    <input type="file" id="fileInput" name="fileInput" class="file-input">
+    <button class="upload-button" onclick="fileInput.click();">
+        <i class="fas fa-file-upload"></i> Importer
+    </button>
+</div>
 
-            <!-- Bouton de soumission -->
-            <input type="submit" value="Soumettre" onclick="afficherAlerte(); return false;">
+<!-- Bouton de soumission -->
+<button type="submit" onclick="afficherAlerte(); return false;" class="submit-button">
+    <i class="fas fa-save"></i> Enregistrer
+</button>
+
+
+
+<style>
+    .file-upload-container {
+    display: flex; /* Use flexbox to align items in a row */
+    align-items: center; /* Center items vertically */
+    gap: 15px; /* Space between the input label, file input, and button */
+    margin-bottom: 20px; /* Space below the upload container */
+}
+
+.file-label {
+    font-size: 18px; /* Larger font size for better readability */
+    color: #333; /* Dark gray color for text */
+}
+
+.file-input {
+    display: none; /* Hide the default file input */
+}
+
+.upload-button {
+    display: inline-flex; /* Flexbox for centering */
+    align-items: center; /* Center items vertically */
+    padding: 12px 20px; /* Padding for a spacious feel */
+    font-size: 16px; /* Font size */
+    color: #fff; /* Text color */
+    background-color: #e63946; /* Red background */
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transitions */
+}
+
+.upload-button:hover {
+    background-color: #d62839; /* Darker red on hover */
+}
+
+.submit-button {
+    display: inline-flex; /* Flexbox for centering */
+    align-items: center; /* Center items vertically */
+    padding: 12px 20px; /* Padding for a spacious feel */
+    font-size: 16px; /* Font size */
+    color: #fff; /* Text color */
+    background-color: #268484; /* Blue-green color */
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transitions */
+}
+
+.submit-button:hover {
+    background-color: #186e80; /* Darker shade on hover */
+}
+
+.submit-button i,
+.upload-button i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+</style>
+
+
+
+
+            
             <script>
                 function afficherAlerte() {
                     alert("Payer 2$ pour enregistrer votre Échantillon");
@@ -216,5 +290,22 @@
         </form>
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 </body>
 </html>

@@ -22,6 +22,8 @@
         <link rel="stylesheet" href="css/slick.css"/>
 
         <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
         
 <!--
 
@@ -52,20 +54,21 @@ https://www.tooplate.com/view/2127-little-fashion
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link " href="index.html">Accueil</a>
+                           
+                            <a class="nav-link " href="index.html"> <i class="fa fa-home"></i> Accueil</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="faste.html">Fournisseurs et Manufacture</a>
+                            <a class="nav-link active" href="faste.html"> <i class="fa fa-industry"></i>  Fournisseurs et Manufacture</a>
                         </li>
 
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="ajouterDesEchantillons.html">Ajouter votre Echantillons</a>
+                            <a class="nav-link" href="ajouterDesEchantillons.html"> <i class="fa fa-plus-square"></i> Ajouter votre Echantillons</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " href="sign-up.html">Contact</a>
+                            <a class="nav-link " href="sign-up.html"> <i class="fa fa-envelope"></i> Contact</a>
                         </li>
                     </ul>
 
@@ -97,7 +100,7 @@ https://www.tooplate.com/view/2127-little-fashion
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
@@ -187,207 +190,266 @@ https://www.tooplate.com/view/2127-little-fashion
     </div>
 
 
+    <style>
+        .buttons {
+            display: flex; /* Arrange buttons in a row */
+            gap: 10px; /* Space between buttons */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            background-color: #f0f0f0;
+            border: 2px solid #ddd; /* Default border */
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.3s ease; /* Smooth transition for border */
+        }
+
+        button:hover {
+            border-color: #4285f4; /* Google blue border on hover */
+        }
+
+        .active {
+            border-color: #4285f4; /* Active button border color */
+            background-color: #e0e7ff; /* Light blue background for active button */
+        }
+
+        .content {
+            display: none; /* Hide all content sections by default */
+        }
+
+        .content.active {
+            display: block; /* Show the active content section */
+        }
+
+        .modern-button {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+            margin: 10px;
+            min-width: 150px; /* Ensures the buttons have a minimum width */
+            text-align: center;
+            flex-grow: 1; /* Allows buttons to grow equally in width */
+        }
+
+        .modern-button:hover, .modern-button:focus {
+            border-color: #4285f4; /* Blue border on hover */
+            color: #4285f4; /* Text color changes to blue */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+        }
+
+        .modern-button.activeted {
+            border-color: #4285f4; /* Blue border on hover */
+            color: #4285f4; /* Text color changes to blue */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+        }
+
+        /* Container styling */
+        .typeEcht100 {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically on small screens */
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Responsive design: On wider screens, display buttons in a single horizontal line */
+        @media (min-width: 768px) {
+            .typeEcht100 {
+                flex-direction: row; /* Align buttons horizontally on larger screens */
+                flex-wrap: nowrap; /* Prevent wrapping */
+                justify-content: center; /* Center the buttons in a single row */
+            }
+        }
+
+        .echatillon {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: center;
+            margin: 20px 0; /* Add some margin for spacing */
+        }
+
+        .ligne1 {
+            flex: 1 1 300px;
+            margin: 10px;
+            max-width: 45%;
+        }
+
+        .ligne1 img {
+            width: 50%;
+            height: auto;
+            transition: 0.2s;
+        }
+
+        .ligne1 img:hover {
+            width: 52%;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        /* Media query to adjust layout for smaller screens */
+        @media (max-width: 768px) {
+            .ligne1 {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
     <div class="buttons">
-        <button onclick="afficherContenu('fournisseur', this)">Fournisseurs</button>
-        <button onclick="afficherContenu('manufact', this)">Manufacture</button>
-        <button onclick="afficherContenu('echantillon', this)">Échantillon</button>
+        <button onclick="afficherContenu('fournisseur', this)" class="active">
+            <i class="fas fa-truck"></i> Fournisseurs
+        </button>
+        <button onclick="afficherContenu('manufact', this)">
+            <i class="fas fa-industry"></i> Manufacture
+        </button>
+        <button onclick="afficherContenu('echantillon', this)">
+            <i class="fa fa-archive"></i> Échantillon
+        </button>
     </div>
 
-
-
-
-
-
-
-
-
     <!-- Contenu lié à chaque bouton -->
-    <div id="fournisseur" class="content">
+    <div id="fournisseur" class="content active">
         <h1>Nos Fournisseurs</h1>
         <ul id="fournisseur-list"></ul>
-        <button onclick="addFournisseur()">Ajouter un Fournisseur</button>
+        <button class="modern-button" onclick="addFournisseur()">Ajouter un Fournisseur</button>
     </div>
 
     <div id="manufact" class="content">
         <h1>Nos Manufactures</h1>
         <ul id="manufact-list"></ul>
-        <button onclick="addManufact()">Ajouter une Manufacture</button>
+        <button class="modern-button" onclick="addManufact()">Ajouter une Manufacture</button>
     </div>
-
-    <script>
-        const fournisseurFilePath = '/Nouveau dossier/carreau/fournisseurs.json';
-const manufactFilePath = '/Nouveau dossier/carreau/manufactures.json';
-
-// Charger les données depuis les fichiers JSON
-window.onload = function() {
-    loadData(fournisseurFilePath, 'fournisseur-list');
-    loadData(manufactFilePath, 'manufact-list');
-};
-
-// Fonction pour charger les données JSON et les afficher
-function loadData(filePath, listId) {
-    fetch(filePath)
-        .then(response => response.json())
-        .then(data => {
-            const list = document.getElementById(listId);
-            data.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = item.name;
-                list.appendChild(li);
-            });
-        })
-        .catch(error => console.error('Erreur de chargement:', error));
-}
-
-// Fonction pour ajouter un fournisseur
-function addFournisseur() {
-    const fournisseurName = prompt("Entrez le nom du fournisseur :");
-    if (fournisseurName) {
-        saveData(fournisseurFilePath, { name: fournisseurName });
-        const list = document.getElementById('fournisseur-list');
-        const li = document.createElement('li');
-        li.textContent = fournisseurName;
-        list.appendChild(li);
-    }
-}
-
-// Fonction pour ajouter une manufacture
-function addManufact() {
-    const manufactName = prompt("Entrez le nom de la manufacture :");
-    if (manufactName) {
-        saveData(manufactFilePath, { name: manufactName });
-        const list = document.getElementById('manufact-list');
-        const li = document.createElement('li');
-        li.textContent = manufactName;
-        list.appendChild(li);
-    }
-}
-
-// Fonction pour enregistrer des données dans un fichier JSON
-function saveData(filePath, newItem) {
-    fetch(filePath)
-        .then(response => response.json())
-        .then(data => {
-            data.push(newItem);
-            // Envoyer les nouvelles données dans le fichier JSON
-            fetch(filePath, {
-                method: 'POST', // Ajuster en fonction du serveur
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            }).catch(error => console.error('Erreur d\'enregistrement:', error));
-        })
-        .catch(error => console.error('Erreur de chargement:', error));
-}
-
-    </script>
     
-
-
-
-
-
-
-
-
-
 
 
     <div id="echantillon" class="content">
+        <h1>Échantillons</h1>
+
+        <div class="typeEcht100">
+            <button class="modern-button activeted">Carrelage en céramique</button>
+            <button class="modern-button">Parquet en bois massif</button>
+            <button class="modern-button">Sol vinyle (PVC)</button>
+            <button class="modern-button">Moquette</button>
+            <button class="modern-button">Béton ciré</button>
+            <button class="modern-button">Lino (linoléum)</button>
+        </div>
+
         <div class="echatillon">
             <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/3TMD2690.jpeg" alt="">
-                <p> <span>#12593</span> </p>
+                <img src="Nouveau dossier/carreau/16 - 32/FCS801621E SF.jpeg" alt="">
+                <p><span>#12593</span></p>
             </div>
             <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/69-871.jpeg" alt="">
-                <p> <span>#0001</span> </p>
+                <img src="Nouveau dossier/carreau/16 - 32/FG843045.jpeg" alt="">
+                <p><span>#0001</span></p>
             </div>
             <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/B6633012.jpeg" alt="">
-                <p> <span>#0901</span> </p>
+                <img src="Nouveau dossier/carreau/16 - 32/HG846200 SF.jpeg" alt="">
+                <p><span>#0901</span></p>
             </div>
             <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/CORTINA BEIGE.jpeg" alt="">
-                <p> <span>#9301</span> </p>
+                <img src="Nouveau dossier/carreau/16 - 32/HG846209 SF.jpeg" alt="">
+                <p><span>#9301</span></p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/16 - 32/HG846825.jpeg" alt="">
+                <p><span>#9s301</span></p>
             </div>
         </div>
         <div class="echatillon">
             <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/DSL0620.jpeg" alt="">
-                <p> <span>#1Fs93</span> </p>
+                <img src="Nouveau dossier/carreau/24 -24/60ML01 MATT.jpeg" alt="">
+                <p><span>#1Fs93</span></p>
             </div>
             <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/ECO STONE BIANCO.jpeg" alt="">
-                <p> <span>#uXc1</span> </p>
+                <img src="Nouveau dossier/carreau/24 -24/662DG SF.jpeg" alt="">
+                <p><span>#uXc1</span></p>
             </div>
             <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/GANI MARBLE.jpeg" alt="">
-                <p> <span>#ab901</span> </p>
+                <img src="Nouveau dossier/carreau/24 -24/BG601005.jpeg" alt="">
+                <p><span>#ab901</span></p>
             </div>
             <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/HF631505.jpeg" alt="">
-                <p> <span>#9s301</span> </p>
-            </div>
-        </div>
-        <div class="echatillon">
-            <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/DSL0620.jpeg" alt="">
-                <p> <span>#1Fs93</span> </p>
+                <img src="Nouveau dossier/carreau/24 -24/GANI MARBLE  GLOSSY.jpeg" alt="">
+                <p><span>#9s301</span></p>
             </div>
             <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/ECO STONE BIANCO.jpeg" alt="">
-                <p> <span>#uXc1</span> </p>
-            </div>
-            <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/GANI MARBLE.jpeg" alt="">
-                <p> <span>#ab901</span> </p>
-            </div>
-            <div class="ligne1">
-                <img src="Nouveau dossier/carreau/12 - 24/HF631505.jpeg" alt="">
-                <p> <span>#9s301</span> </p>
+                <img src="Nouveau dossier/carreau/24 -24/MISC GLOSSY.jpeg" alt="">
+                <p><span>#9s301</span></p>
             </div>
         </div>
 
-         
-        <style>
-            .echatillon {
-               
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                text-align: center;
-            }
-    
-            .ligne1 {
-                flex: 1 1 300px;
-                margin: 10px;
-                max-width: 45%;
-            }
-    
-            .ligne1 img {
-                width: 80%;
-                height: auto;
-                transition: 0.2s;
-            }
-
-            .ligne1 img:hover{
-                border: rgb(68, 184, 202);
-            }
-            span{
-                font-weight: bold;
-            }
-    
-            /* Media query to adjust layout for smaller screens */
-            @media (max-width: 768px) {
-                .ligne1 {
-                    max-width: 100%;
-                }
-            }
-        </style>
+        <div class="echatillon">
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/DSL0620.jpeg" alt="">
+                <p><span>#1Fs93</span></p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/ECO STONE BIANCO.jpeg" alt="">
+                <p><span>#uXc1</span></p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/GANI MARBLE.jpeg" alt="">
+                <p><span>#ab901</span></p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/HF631505.jpeg" alt="">
+                <p><span>#9s301</span></p>
+            </div>
+            <div class="ligne1">
+                <img src="Nouveau dossier/carreau/12 - 24/HF631505.jpeg" alt="">
+                <p><span>#9s301</span></p>
+            </div>
+        </div>
     </div>
 
+    <script>
+        function afficherContenu(id, element) {
+            // Masquer tous les contenus
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Activer le contenu sélectionné
+            document.getElementById(id).classList.add('active');
+
+            // Gérer l'état actif du bouton
+            document.querySelectorAll('.buttons button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        // Fonctions pour ajouter des fournisseurs et manufactures
+        function addFournisseur() {
+            // Logique pour ajouter un fournisseur
+            console.log('Ajouter un fournisseur');
+        }
+
+        function addManufact() {
+            // Logique pour ajouter une manufacture
+            console.log('Ajouter une manufacture');
+        }
+    </script>
+</body>
+</html>
+     
         
 
         <!-- JAVASCRIPT FILES -->
